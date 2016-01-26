@@ -1,0 +1,10 @@
+<h1>Magic 8 Ball</h1>
+<hr>
+<% if params[:q].present? %>
+  <h2>You asked: <%= params[:q] %>?</h2>
+  <h2>Magic 8 Ball says: <%= @magic_answer %></h2>
+<% else %>
+  <%= form_tag("magic-ball", method: :get) %>
+  <%= text_field_tag :q, nil, { placeholder: "Enter your question", class: "question_class" } %>
+  <%= submit_tag "Ask" %>
+<% end %>

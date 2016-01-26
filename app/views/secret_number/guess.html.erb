@@ -1,0 +1,5 @@
+<h1>Guess my number</h1>
+
+<% 10.times do |i| %>
+  <%= link_to("Guess #{i}", secret_number_results_path(guess: i), method: :post) %>
+<% end %>
